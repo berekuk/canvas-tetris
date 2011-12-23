@@ -406,7 +406,9 @@ function canvas_tetris(canvas) {
         this.width = this.figures[this.id].width;
         this.height = this.figures[this.id].height;
         if (this.rotate_id % 2) {
-            [this.width, this.height] = [this.height, this.width];
+            var t = this.width;
+            this.width = this.height;
+            this.height = t;
         }
     };
 
